@@ -304,7 +304,7 @@ function Homepage() {
               <h3 className="text-xl font-bold text-white mb-4">Connect With Us</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="https://github.com/subharthihazra/CalmSpace" 
+                  href="https://github.com/Naganathan194/Calmspace" 
                   target="_blank"
                   className="text-2xl hover:text-purple-400 transition-colors"
                 >
