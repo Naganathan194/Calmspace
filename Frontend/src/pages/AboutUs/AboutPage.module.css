@@ -1,0 +1,354 @@
+.aboutPage {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.aboutHero {
+  position: relative;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 100px 5% 120px;
+  overflow: hidden;
+  border-radius: 0 0 30% 0;
+}
+
+.aboutHeroContent {
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.heroEyebrow {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.aboutHero h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.aboutHero p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.heroPattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.patternCircle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  right: -80px;
+}
+
+.circle2 {
+  width: 500px;
+  height: 500px;
+  bottom: -200px;
+  right: 10%;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  top: 40%;
+  right: 30%;
+}
+
+/* Values Section */
+.aboutValues {
+  padding: 100px 5%;
+  background-color: white;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background: #6366f1;
+  margin: 0 auto;
+}
+
+.sectionHeader p {
+  max-width: 600px;
+  margin: 1.5rem auto 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  background: #f8f9fa;
+  padding: 40px 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+.valueIcon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #6366f1;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.valueIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.valueCard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.valueCard p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Team Section */
+.aboutTeam {
+  padding: 100px 5%;
+  background-color: #f9f9f9;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamMember {
+  transition: all 0.3s ease;
+}
+
+.teamMember:hover {
+  transform: translateY(-5px);
+}
+
+.memberImage {
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.memberImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.teamMember:hover .memberImage img {
+  transform: scale(1.05);
+}
+
+.memberInfo {
+  text-align: center;
+}
+
+.memberInfo h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.memberInfo p {
+  color: #6366f1;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.aboutCta {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  text-align: center;
+  padding: 100px 5%;
+  border-radius: 30% 0 0 0;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutCta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.aboutCta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  background-color: white;
+  color: #6366f1;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .aboutHero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .aboutHero {
+    padding: 80px 5% 100px;
+  }
+  
+  .heroPattern {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .aboutHero p {
+    font-size: 1.1rem;
+  }
+  
+  .aboutHero {
+    border-radius: 0 0 15% 0;
+    padding: 70px 5% 90px;
+  }
+  
+  .aboutValues, .aboutTeam {
+    padding: 70px 5%;
+  }
+  
+  .aboutCta {
+    padding: 70px 5%;
+    border-radius: 15% 0 0 0;
+  }
+  
+  .aboutCta h2 {
+    font-size: 2rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutHero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .heroEyebrow {
+    font-size: 0.75rem;
+  }
+  
+  .aboutHero p, .aboutCta p {
+    font-size: 1rem;
+  }
+  
+  .valueCard {
+    padding: 30px 20px;
+  }
+  
+  .valueIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .aboutCta h2 {
+    font-size: 1.8rem;
+  }
+  
+  .ctaButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  .teamGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+  }
+  
+  .memberImage {
+    height: 200px;
+  }
+}

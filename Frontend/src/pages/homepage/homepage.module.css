@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* You can remove the old CSS file and use these styles with Tailwind directly in the JSX component */
+/* If you need to add any custom animations or styles not covered by Tailwind, you can add them here */
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animation for the chat button */
+@keyframes pulse-purple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(126, 34, 206, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(126, 34, 206, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(126, 34, 206, 0);
+  }
+}
+
+.pulse-button {
+  animation: pulse-purple 2s infinite;
+}
