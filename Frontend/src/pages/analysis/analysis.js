@@ -196,7 +196,7 @@ function ScoreChart({ dataset }) {
             return context[0].label;
           },
           label: function(context) {
-            return `Score: ${scoreMapArr[11 - context.raw]}`;
+            return `Score: ${scoreMapArr[context.raw]}`;
           }
         }
       },
