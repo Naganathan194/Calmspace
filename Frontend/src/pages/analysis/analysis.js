@@ -37,16 +37,16 @@ function timestampToDate(timestamp) {
 
 // Mental wellness score mapping
 const scoreMapArr = [
-  "Excellent",
-  "Very Good",
-  "Good",
-  "Above Average",
-  "Average",
-  "Below Average",
-  "Fair",
-  "Poor",
-  "Very Poor",
   "Terrible",
+  "Very Poor",
+  "Poor",
+  "Fair",
+  "Below Average",
+  "Average",
+  "Above Average",
+  "Good",
+  "Very Good",
+  "Excellent"
 ];
 
 // New color scheme for scores - more vibrant
@@ -81,7 +81,7 @@ const scoreMapTxtcolArr = [
 function ScoreChart({ dataset }) {
   let chartData = dataset
     .map((rep) => ({
-      score: 11 - parseInt(rep.score),
+      score: parseInt(rep.score),
       timestamp: rep.timestamp,
     }))
     ?.reverse();
@@ -162,7 +162,7 @@ function ScoreChart({ dataset }) {
             size: 10,
           },
           callback: function(value) {
-            return scoreMapArr[11 - value];
+            return scoreMapArr[value];
           }
         },
         grid: {
@@ -253,7 +253,7 @@ function AnalysisDetails({ curRep, handleBackToList }) {
                 color: scoreMapTxtcolArr[curRep.score]
               }}
             >
-              {11 - parseInt(curRep.score)}
+              {parseInt(curRep.score)}
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-white">
@@ -620,7 +620,7 @@ function Analysis() {
                           color: scoreMapTxtcolArr[rep.score]
                         }}
                       >
-                        {11 - parseInt(rep.score)}
+                        {parseInt(rep.score)}
                       </div>
                       <div>
                         <div className={`text-lg font-medium ${analysisHist[i]?.new ? "text-purple-300" : "text-white"}`}>

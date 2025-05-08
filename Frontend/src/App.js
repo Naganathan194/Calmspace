@@ -11,6 +11,10 @@ import { PrivateRouteAnalysis } from "./components/router/PrivateRouterAnalysis"
 import Analysis from "./pages/analysis/analysis";
 import Error from "./pages/error/error";
 import AboutPage from "./pages/AboutUs/AboutPage";
+import Games from './pages/Games/Games';
+import ColorHunter from './pages/Games/components/ColorHunter';
+import FindOut from './pages/Games/components/FindOut';
+import OddOneOut from './pages/Games/components/OddOneOutGame';
 
 function App() {
   const { login } = useContext(LoginContext);
@@ -56,6 +60,10 @@ function App() {
         />
         <Route path="/aboutus" element={<AboutPage />} />
         <Route path="*" element={<Error />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/games/color-hunter" element={<ColorHunter />} />
+        <Route path="/games/find-out" element={<FindOut />} />
+        <Route path="/games/odd-one-out" element={<OddOneOut />} />
       </Routes>
     </BrowserRouter>
   );

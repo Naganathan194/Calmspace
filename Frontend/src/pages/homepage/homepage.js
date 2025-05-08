@@ -77,6 +77,12 @@ function Homepage() {
             >
               Articles
             </button>
+            <button
+                onClick={() => navigate("/games")}
+                className="bg-purple-100 text-purple-700 px-4 py-2 rounded-full hover:bg-purple-200 transition-colors"
+              >
+               Games
+              </button>
             {loggedIn && (
               <button
                 onClick={() => navigate("/analysis")}
@@ -291,6 +297,9 @@ function Homepage() {
                     Chat
                   </button>
                 </li>
+                <button onClick={() => navigate("/games")} className="hover:text-purple-400 transition-colors">
+                    Games
+                  </button>
                 {loggedIn && (
                   <li>
                     <button onClick={() => navigate("/analysis")} className="hover:text-purple-400 transition-colors">

@@ -1,0 +1,391 @@
+/* Light Calming Theme */
+:root {
+  --sky-blue: #a6d8f5;
+  --soft-pink: #ffb6c1;
+  --lavender: #e6e6fa;
+  --mint: #c7f6d4;
+  --peach: #ffdab9;
+  --cloud-white: #f9f9f9;
+  --light-gray: #e0e0e0;
+  --medium-gray: #a0a0a0;
+  --accent-blue: #5b9bd5;
+  --accent-pink: #ff8da1;
+  --accent-purple: #caa8f5;
+  --accent-mint: #98e2c6;
+  --gradient-main: linear-gradient(135deg, var(--sky-blue), var(--soft-pink));
+  --gradient-secondary: linear-gradient(135deg, var(--lavender), var(--mint));
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --text-dark: #444;
+  --text-medium: #666;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Updated background to be lighter and softer */
+  background: linear-gradient(135deg, #f0f9ff 0%, #fff5f7 50%, #faf6ff 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-out;
+  position: relative; /* Added for proper positioning context */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  /* Added top padding to prevent collision with the back button */
+  padding-top: 3.5rem;
+}
+
+.header h1 {
+  background: linear-gradient(135deg, #5b9bd5, #ff8da1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.8rem;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(91, 155, 213, 0.2);
+}
+
+.timer {
+  margin: 0 auto;
+  width: 85%;
+  position: relative;
+}
+
+.timeDisplay {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-family: 'Roboto Mono', monospace;
+  opacity: 0.9;
+}
+
+.timeBar {
+  height: 12px;
+  background-color: rgba(230, 230, 230, 0.6);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.timeProgress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-pink));
+  transition: width 1s linear;
+  box-shadow: 0 0 8px rgba(255, 141, 161, 0.4);
+}
+
+.gamePanel {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease;
+  animation: floatIn 0.8s ease-out;
+}
+
+.gamePanel:hover {
+  transform: translateY(-5px);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+}
+
+.statBox {
+  text-align: center;
+  padding: 1.2rem;
+  background: var(--gradient-secondary);
+  border-radius: 18px;
+  width: 45%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.statBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.statBox span {
+  display: block;
+}
+
+.statBox span:first-child {
+  font-size: 1rem;
+  color: var(--text-medium);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Add score animation class */
+.scoreAnimation {
+  animation: scoreIncrease 0.7s ease-out;
+}
+
+@keyframes scoreIncrease {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); color: var(--accent-pink); }
+  100% { transform: scale(1); }
+}
+
+.targetDisplay {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: white;
+  padding: 1.2rem;
+  border-radius: 18px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 20px rgba(91, 155, 213, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: softPulse 3s infinite;
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.colorButton {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.colorButton:hover {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.colorButton:active {
+  transform: scale(0.95);
+}
+
+.colorButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, 
+              rgba(255, 255, 255, 0.4) 0%, 
+              rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.colorButton:hover::after {
+  opacity: 0.7;
+}
+
+.gameOver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.resultBox {
+  background: linear-gradient(145deg, #ffffff, #f5f5f7);
+  padding: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transform: scale(0.9);
+  animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.resultBox h2 {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  font-size: 2.6rem;
+  text-shadow: 0 2px 5px rgba(91, 155, 213, 0.2);
+}
+
+.finalScore {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.playButton {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(91, 155, 213, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.playButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(91, 155, 213, 0.4);
+}
+
+.playButton:active {
+  transform: translateY(1px);
+}
+
+.playButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(255, 255, 255, 0.3), 
+              transparent);
+  transition: 0.6s;
+}
+
+.playButton:hover::before {
+  left: 100%;
+}
+
+/* Updated Back Button Styles to prevent overlap */
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--accent-mint), var(--accent-blue));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(91, 155, 213, 0.3);
+  font-weight: 600;
+}
+
+.backButton:hover {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-mint));
+  transform: translateX(-3px);
+  box-shadow: 0 6px 20px rgba(91, 155, 213, 0.4);
+}
+
+/* Animations */
+@keyframes softPulse {
+  0% { transform: scale(1); box-shadow: 0 6px 20px rgba(91, 155, 213, 0.2); }
+  50% { transform: scale(1.02); box-shadow: 0 8px 25px rgba(91, 155, 213, 0.3); }
+  100% { transform: scale(1); box-shadow: 0 6px 20px rgba(91, 155, 213, 0.2); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* For smaller screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .header {
+    /* Keep sufficient padding on small screens too */
+    padding-top: 3rem;
+  }
+  
+  .header h1 {
+    font-size: 2.4rem;
+  }
+  
+  .timeDisplay {
+    font-size: 2rem;
+  }
+  
+  .gamePanel {
+    padding: 1.5rem;
+  }
+  
+  .statBox {
+    padding: 1rem;
+  }
+  
+  .colorGrid {
+    gap: 12px;
+  }
+  
+  .resultBox {
+    padding: 2rem;
+  }
+}

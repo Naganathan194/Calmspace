@@ -5,6 +5,7 @@ import LoginContext from "../../context/context";
 import { FiLogIn, FiLogOut, FiSend, FiBarChart2, FiMenu, FiMessageCircle } from "react-icons/fi";
 import { RiMentalHealthFill, RiEyeCloseLine } from "react-icons/ri";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { IoGameControllerOutline } from "react-icons/io5"; // Added games icon
 import Chat from "./Chat";
 import AnimatedBackground from "./AnimatedBackground";
 import styles from "./message.module.css";
@@ -203,6 +204,18 @@ function Message() {
             <span>Analysis</span>
           </button>
           
+          {/* Added Games Button */}
+          <button 
+            className={styles.menuButton}
+            onClick={() => {
+              if (!loggedIn) navigate("/login");
+              else navigate("/games");
+            }}
+          >
+            <IoGameControllerOutline />
+            <span>Games</span>
+          </button>
+          
           <button 
             className={styles.menuButton}
             onClick={() => setDarkMode(!darkMode)}
@@ -354,6 +367,21 @@ function Message() {
               >
                 <FiBarChart2 />
                 <span>Analysis</span>
+              </button>
+              
+              {/* Added Games Button to Mobile Menu */}
+              <button 
+                className={styles.menuButton}
+                onClick={() => {
+                  if (!loggedIn) navigate("/login");
+                  else {
+                    navigate("/games");
+                    setMenuOpen(false);
+                  }
+                }}
+              >
+                <IoGameControllerOutline />
+                <span>Games</span>
               </button>
               
               <button 
