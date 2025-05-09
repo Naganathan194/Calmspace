@@ -152,12 +152,6 @@ We welcome contributions! To get started:
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License**. 📜
-
----
-
 ## 📬 Contact
 
 - 📧 Email: [naganathan@gmail.com](mailto:naganathan@gmail.com)  
