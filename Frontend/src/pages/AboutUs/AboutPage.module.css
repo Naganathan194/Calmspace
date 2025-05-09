@@ -171,12 +171,35 @@
   background-color: #f9f9f9;
 }
 
+/* Updated teamGrid to have specific layout for 5 members */
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+/* Apply specific layout for the last two team members */
+.teamGrid > *:nth-last-child(-n+2) {
+  grid-column: span 1;
+}
+
+/* When in mobile view, stack everything */
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .teamGrid > *:nth-last-child(-n+2) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .teamMember {
@@ -341,11 +364,6 @@
   .ctaButton {
     padding: 12px 30px;
     font-size: 1rem;
-  }
-  
-  .teamGrid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 25px;
   }
   
   .memberImage {

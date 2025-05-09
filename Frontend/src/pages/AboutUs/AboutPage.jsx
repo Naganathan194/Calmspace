@@ -5,8 +5,8 @@ import ContributorCard from "./ContributorCard";
 import aswanthImage from "../../svgs/images/Aswanth.jpg";
 import prasennaImage from "../../svgs/images/Prasenna.jpg";
 import naguImage from "../../svgs/images/Nagu.jpg";
-import RagavarshanaImage from "../../svgs/images/Ragavarshana.jpg";
-
+import ragavarshanaImage from "../../svgs/images/Ragavarshana.jpg";
+import monikaImage from "../../svgs/images/Monika.jpg";
 export default function AboutPage() {
   const navigate = useNavigate();
   // Manual contributors data with properly referenced images
@@ -33,7 +33,13 @@ export default function AboutPage() {
       id: 4,
       name: "Ragavarshana S S",
       role: "Frontend Developer",
-      image: RagavarshanaImage, // Using imported placeholder
+      image: ragavarshanaImage, // Using imported placeholder
+    },
+    {
+      id: 5, // Fixed duplicate ID
+      name: "Monika S",
+      role: "Frontend Developer",
+      image: monikaImage, // Using imported placeholder
     },
   ];
 
