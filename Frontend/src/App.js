@@ -14,7 +14,7 @@ import AboutPage from "./pages/AboutUs/AboutPage";
 import Games from './pages/Games/Games';
 import ColorHunter from './pages/Games/components/ColorHunter';
 import FindOut from './pages/Games/components/FindOut';
-import OddOneOut from './pages/Games/components/OddOneOutGame';
+import OddOneOut from './pages/Games/components/OddOneOutGame'; 
 
 function App() {
   const { login } = useContext(LoginContext);

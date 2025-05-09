@@ -203,8 +203,7 @@ function Message() {
             <FiBarChart2 />
             <span>Analysis</span>
           </button>
-          
-          {/* Added Games Button */}
+
           <button 
             className={styles.menuButton}
             onClick={() => {
@@ -369,7 +368,6 @@ function Message() {
                 <span>Analysis</span>
               </button>
               
-              {/* Added Games Button to Mobile Menu */}
               <button 
                 className={styles.menuButton}
                 onClick={() => {
