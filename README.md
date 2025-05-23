@@ -155,4 +155,4 @@ We welcome contributions! To get started:
 ## 📬 Contact
 
 - 📧 Email: [naganathan@gmail.com](mailto:naganathan@gmail.com)  
-- 🐙 GitHub: [@Naganathan194](https://github.com/Naganathan194)  
+- 🐙 GitHub: [Naganathan194](https://github.com/Naganathan194)  
