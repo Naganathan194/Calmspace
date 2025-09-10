@@ -1,6 +1,6 @@
 # 🧘‍♀️ Calmspace – Your Personal Sanctuary for Mindfulness 🌿
 
-> _“Inhale peace, exhale stress.”_  
+> _“Inhale peace, exhale stress.”_
 > **Calmspace** is your digital companion for achieving tranquility and mental well-being.
 
 ---
